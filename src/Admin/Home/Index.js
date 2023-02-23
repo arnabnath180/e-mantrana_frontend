@@ -1,9 +1,20 @@
 import React from 'react'
 import './Index.css'
 import { Link } from 'react-router-dom'
+import Popup from '../Popup/Index.js'
 export default function Index() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const showModal = () => {
+    setIsOpen(true);
+  };
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
   return (
     <div className='container'>
+      {isOpen?<Popup status={isOpen} hide={hideModal}/>:""}
       <div class="row">
         <div class="col-sm-8">
         </div>
@@ -15,7 +26,7 @@ export default function Index() {
           </div>
           <div class="row">
             <div class="col">
-              <button type="button" class="btn btn-success btn-lg btn-block">Fetch Doctor</button>
+              <button type="button" class="btn btn-success btn-lg btn-block" onClick={showModal}>Fetch Doctor</button>
             </div>
           </div>
           <div class="row">
