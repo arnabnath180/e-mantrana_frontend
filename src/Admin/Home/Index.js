@@ -6,7 +6,6 @@ export default function Index() {
     <div className='container'>
       <div class="row">
         <div class="col-sm-8">
-            
         </div>
         <div class="col-sm-4">
           <div class="row">
