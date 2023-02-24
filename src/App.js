@@ -6,6 +6,7 @@ import Protected from './ProtectedRoutes/AdminProtectedRoutes/Index.js'
 import AdminDashboard from './Admin/Home/Index.js'
 import LogoutHeader from './Admin/LogoutHeader/Index.js'
 import DoctorRegister from './Admin/DoctorRegister/Index.js'
+import DoctorDetails from './Admin/DoctorDetails/Index.js'
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/admin/login" element={<><AdminHeader/><AdminLogin/></>}></Route>
             <Route exact path="/admin/dashboard" element={<><Protected Component={LogoutHeader}/><Protected Component={AdminDashboard}/></>}></Route>
             <Route exact path="/admin/doctorregister" element={<><Protected Component={LogoutHeader}/><Protected Component={DoctorRegister}/></>}></Route>
+            <Route exact path="/admin/doctordetails" element={<><Protected Component={LogoutHeader}/><Protected Component={DoctorDetails}/></>}></Route>
           </Routes>
         </Router>
       </AdminAuthState>

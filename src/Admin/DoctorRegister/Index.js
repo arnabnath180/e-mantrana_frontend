@@ -3,7 +3,7 @@ import TimePicker from 'react-bootstrap-time-picker';
 import axios from 'axios';
 export default function Index() {
     const [type,setType]=useState("General");
-    const [special,setSpecial]=useState("");
+    const [special,setSpecial]=useState("Skin & Hair");
     const [monday,setMonday]=useState(false);
     const [mondayT,setMondayT]=useState("0");
     const [mondayO,setMondayO]=useState("0");
@@ -143,7 +143,7 @@ export default function Index() {
                 <label for="exampleFormControlSelect1">Choose Type</label><br/>
                 <select class="form-control" id="exampleFormControlSelect1" value={type} 
                 onChange={(e)=>setType(e.target.value)}>
-                    <option>General</option>
+                    <option default>General</option>
                     <option>Specialist</option>
                 </select>
             </div>
@@ -152,7 +152,7 @@ export default function Index() {
                     <label for="exampleFormControlSelect2">Select Specialization</label>
                     <select class="form-control" id="exampleFormControlSelect2" value={special}
                     onChange={(e)=>setSpecial(e.target.value)}>
-                        <option>Skin & Hair</option>
+                        <option default>Skin & Hair</option>
                         <option>Dental Care</option>
                         <option>Bones & Joints</option>
                         <option>Sexual Health</option>
